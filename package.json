@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "- Node.js is not a Programming language.\r - Node.js is not a Technology.\r - Node.js is not a Framework.\r - Node.js is not a Library.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwaroopVNaik/Backend-node.js-and-Express.js-.git"
+  },
+  "author": "Swaroop V Naik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwaroopVNaik/Backend-node.js-and-Express.js-/issues"
+  },
+  "homepage": "https://github.com/SwaroopVNaik/Backend-node.js-and-Express.js-#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1"
+  }
+}
