@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Task Details</title>
+</head>
+<body>
+
+    <div class="w-full min-h-screen bg-purple-700 p-10">
+
+        <a href="/" class="inline-block bg-pink-500 text-white px-4 py-2 rounded-md"> Back </a>
+
+
+        <form action="/edit" method="post">
+                <input class="block px-5 py-2 bg-white w-1/4 rounded-lg outline-none" type="text" placeholder = "Previous Name" name="Previous" value="<%=filename%>" readonly>
+                <input class="block px-5 py-2 resize-none bg-white mt-2 w-1/4 rounded-lg outline-none" placeholder = "Add new filename" name="newname">
+                <input class="block px-5 py-2 bg-yellow-500 mt-2 rounded-md" type="submit" value="Update Name">
+        </form>
+    </div>
+
+</body>
+</html>
