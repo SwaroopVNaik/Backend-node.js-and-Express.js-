@@ -21,43 +21,36 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-            <div class="bg-zinc-800/60 border border-zinc-800/80 p-4 rounded-xl flex flex-col justify-between">
-                <div>
-                    <div class="w-full h-48 rounded-lg bg-zinc-700 object-cover"></div>
+            <% if(user.length > 0){ %>
 
-                    <h3 class="text-xl font-medium mt-4 tracking-tighter">
-                        Swaroop V Naik
-                    </h3>
-
-                    <h5 class="text-zinc-400 text-sm mt-1">
-                        swaroop@gmail.com
-                    </h5>
+                <% user.forEach(function(user){ %>
+                <div class="bg-zinc-800/60 border border-zinc-800/80 p-4 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-72 rounded-lg bg-zinc-700 object-cover overflow-hidden">
+                            <img class="w-full h-full object-cover object-center" src="<%= user.image %>" alt="">
+                        </div>
+                        <h3 class="text-xl font-medium mt-4 tracking-tighter">
+                            <%= user.name %>
+                        </h3>
+                        
+                        <h5 class="text-zinc-400 text-sm mt-1">
+                            <%= user.email %>
+                        </h5>
+                        </h5>
+                    </div>
+                    
+                    <div class="flex items-center gap-5 mt-6 pt-4 border-t border-zinc-700/50 text-sm font-medium">
+                        <a class="text-zinc-300 hover:text-white transition-colors" href="/edit/<%= user.id %>">Edit User</a>
+                        <a class="text-red-400 hover:text-red-500 transition-colors" href="/delete/<%= user._id %>">Delete User</a>
+                    </div>
                 </div>
+          <%  }) %>
 
-                <div class="flex items-center gap-5 mt-6 pt-4 border-t border-zinc-700/50 text-sm font-medium">
-                    <a class="text-zinc-300 hover:text-white transition-colors" href="">Edit User</a>
-                    <a class="text-red-400 hover:text-red-500 transition-colors" href="">Delete User</a>
-                </div>
-            </div>
+           <% } else { %>
 
-            <div class="bg-zinc-800/60 border border-zinc-800/80 p-4 rounded-xl flex flex-col justify-between">
-                <div>
-                    <div class="w-full h-48 rounded-lg bg-zinc-700 object-cover"></div>
+            <h3 class="text-zinc-500">No Users Yet</h3>
 
-                    <h3 class="text-xl font-medium mt-4 tracking-tighter">
-                        Swaroop V Naik
-                    </h3>
-
-                    <h5 class="text-zinc-400 text-sm mt-1">
-                        swaroop@gmail.com
-                    </h5>
-                </div>
-
-                <div class="flex items-center gap-5 mt-6 pt-4 border-t border-zinc-700/50 text-sm font-medium">
-                    <a class="text-zinc-300 hover:text-white transition-colors" href="">Edit User</a>
-                    <a class="text-red-400 hover:text-red-500 transition-colors" href="">Delete User</a>
-                </div>
-            </div>
+            <% } %>
 
         </div>
     </div>
