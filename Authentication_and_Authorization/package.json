@@ -1,0 +1,19 @@
+{
+  "name": "authentication_and_authorization",
+  "version": "1.0.0",
+  "description": "- ### Authentication : Authentication is the process of verifying a user's identity, usually using credentials such as an email and password, to confirm that the user is who they claim to be. ✅",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemon": "^3.1.14"
+  }
+}
